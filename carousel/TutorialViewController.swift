@@ -8,12 +8,32 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var tutorialScrollView: UIScrollView!
+    
+    @IBOutlet weak var tutorialImageView: UIImageView!
+    
+    @IBOutlet weak var tutorialPageControl: UIPageControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    tutorialScrollView.contentSize = tutorialImageView.image!.size
+        
+    tutorialScrollView.delegate = self
+        
+    func scrollViewDidEndDecelerating(ScrollView: UIScrollView!) {
+        // Get the current page based on the scroll offset
+        var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
+            
+        // Set the current page, so the dots will update
+        tutorialPageControl.currentPage = page
+        }
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +51,7 @@ class TutorialViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
