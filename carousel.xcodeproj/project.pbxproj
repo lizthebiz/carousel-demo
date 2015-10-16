@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1930BA31BD09A7300AB89D5 /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1930BA21BD09A7300AB89D5 /* ImageTimelineViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1D0587A1BCE0A6E000B3FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D058791BCE0A6E000B3FA5 /* AppDelegate.swift */; };
 		D1D0587C1BCE0A6E000B3FA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D0587B1BCE0A6E000B3FA5 /* ViewController.swift */; };
 		D1D0587F1BCE0A6E000B3FA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D0587D1BCE0A6E000B3FA5 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1930BA21BD09A7300AB89D5 /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
 		D1D058761BCE0A6D000B3FA5 /* carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D058791BCE0A6E000B3FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D0587B1BCE0A6E000B3FA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				D1DD61C41BCE133B003393B8 /* IntroViewController.swift */,
 				D1DD61C61BCF1C2C003393B8 /* SignInViewController.swift */,
 				D1DD61C81BCF1FA3003393B8 /* TutorialViewController.swift */,
+				D1930BA21BD09A7300AB89D5 /* ImageTimelineViewController.swift */,
 				D1DD61CC1BCF2407003393B8 /* ConversationsViewController.swift */,
 				D1DD61CA1BCF2346003393B8 /* SettingsViewController.swift */,
 			);
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1930BA31BD09A7300AB89D5 /* ImageTimelineViewController.swift in Sources */,
 				D1D0587C1BCE0A6E000B3FA5 /* ViewController.swift in Sources */,
 				D1D058A81BCE0E18000B3FA5 /* Common.swift in Sources */,
 				D1DD61CB1BCF2346003393B8 /* SettingsViewController.swift in Sources */,

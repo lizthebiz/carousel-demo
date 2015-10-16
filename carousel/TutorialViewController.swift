@@ -25,15 +25,16 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
     tutorialScrollView.delegate = self
         
-    func scrollViewDidEndDecelerating(ScrollView: UIScrollView!) {
+
+    }
+    
+    func scrollViewDidEndDecelerating(ScrollView: UIScrollView) {
         // Get the current page based on the scroll offset
         var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
-            
+        
         // Set the current page, so the dots will update
         tutorialPageControl.currentPage = page
-        }
         
-
     }
 
     override func didReceiveMemoryWarning() {
