@@ -37,6 +37,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         // Set the current page, so the dots will update
         tutorialPageControl.currentPage = page
         
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

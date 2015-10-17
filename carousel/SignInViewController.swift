@@ -18,6 +18,8 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var signinView: UIView!
     
+    let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
+    
     
     func keyboardWillShow(notification: NSNotification!) {
         
@@ -40,7 +42,7 @@ class SignInViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
-        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .ActionSheet)
+        
         
     }
 
@@ -60,14 +62,23 @@ class SignInViewController: UIViewController {
     }
     */
     
-    @IBAction func editingChanged(sender: AnyObject) {
+    @IBAction func onTap(sender: UIButton) {
         
-        
+        if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
+            
+            // create an OK action
+            let OKAction = UIAlertAction(title: "WTF", style: .Default) { (action) in
+                // handle response here.
+            }
+            // add the OK action to the alert controller
+            alertController.addAction(OKAction)
+            
+            presentViewController(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+            
+        }
     }
-    
 
-    @IBAction func onTap(sender: UITapGestureRecognizer) {
-        emailTextField.endEditing(true)
-    }
 
 }
