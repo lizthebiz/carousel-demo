@@ -50,6 +50,8 @@ class SettingsViewController: UIViewController {
         // add the logout action to the alert controller
         alertController.addAction(logoutAction)
         
+        performSegueWithIdentifier("signoutSegue", sender: self)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
             // handle case of user canceling. Doing nothing will dismiss the view.
         }

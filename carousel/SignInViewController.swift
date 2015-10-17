@@ -67,14 +67,18 @@ class SignInViewController: UIViewController {
         if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             
             // create an OK action
-            let OKAction = UIAlertAction(title: "WTF", style: .Default) { (action) in
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 // handle response here.
             }
-            // add the OK action to the alert controller
-            alertController.addAction(OKAction)
             
-            presentViewController(alertController, animated: true) {
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+            
+        presentViewController(alertController, animated: true) {
                 // optional code for what happens after the alert controller has finished presenting
+            
+            
+            
             }
             
         }
