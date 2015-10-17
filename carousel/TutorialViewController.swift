@@ -16,6 +16,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var tutorialPageControl: UIPageControl!
     
+    @IBOutlet weak var carouselSpinView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
