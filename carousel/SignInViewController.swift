@@ -17,23 +17,16 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var signinView: UIView!
-    
-    let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
-    
-    
-    func keyboardWillShow(notification: NSNotification!) {
-        
-    signinScrollView.contentOffset.y = 70
-        
-    signinView.transform = CGAffineTransformMakeTranslation( 0, -190)
-        
-    }
-    
-    func keyboardWillHide(notification: NSNotification!) {
 
-        
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,13 +35,25 @@ class SignInViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification!) {
         
+        signinScrollView.contentOffset.y = 70
+        
+        signinView.transform = CGAffineTransformMakeTranslation( 0, -180)
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
 
@@ -66,23 +71,51 @@ class SignInViewController: UIViewController {
         
         if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             
+            let emptyAlertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
+            
             // create an OK action
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 // handle response here.
             }
             
-        // add the OK action to the alert controller
-        alertController.addAction(OKAction)
+            // add the OK action to the alert controller
+            emptyAlertController.addAction(OKAction)
             
-        presentViewController(alertController, animated: true) {
+            self.presentViewController(emptyAlertController, animated: true) {
                 // optional code for what happens after the alert controller has finished presenting
-            
-            
-            
             }
             
         }
+        
+        else if emailTextField.text != "liz@pizza.com" || passwordTextField.text != "sliceofcheese" {
+                
+            delay(2){
+                
+            let incorrectAlertController = UIAlertController(title: "Whomp, whomp", message: "Incorrect email addresss and/or password. Please try again!", preferredStyle: .Alert)
+            
+            // create an OK action
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+          
+                }
+            
+            // add the OK action to the alert controller
+            incorrectAlertController.addAction(OKAction)
+            
+            self.presentViewController(incorrectAlertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+                }
+            }
+            
+        }
+        
+        else if emailTextField.text == "liz@pizza.com" && passwordTextField.text == "sliceofcheese" {
+        
+            // Delay for 2 seconds, then run the code between the braces.
+             delay(2){
+                self.performSegueWithIdentifier("signinSegue", sender: nil)
+            }
+                
+        }
     }
-
 
 }

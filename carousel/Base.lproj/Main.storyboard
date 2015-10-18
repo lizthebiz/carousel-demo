@@ -134,6 +134,7 @@
                         <outlet property="passwordTextField" destination="VJR-Ag-jPW" id="Gm6-gG-9Ht"/>
                         <outlet property="signinScrollView" destination="WNY-xi-iZ0" id="7ga-Uc-lar"/>
                         <outlet property="signinView" destination="gde-Pq-7yW" id="IPj-ca-Rwa"/>
+                        <segue destination="AzB-Jz-2Ge" kind="modal" identifier="signinSegue" modalTransitionStyle="crossDissolve" id="1qL-Uq-WiH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOq-bU-hN5" userLabel="First Responder" sceneMemberID="firstResponder"/>

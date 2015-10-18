@@ -14,8 +14,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var settingsImageView: UIImageView!
     
-    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .ActionSheet)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,13 +42,13 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func triggerAlertButton(sender: UIButton) {
-        let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
-            // handle case of user logging out
+        
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .ActionSheet)
+        
+        let logoutAction = UIAlertAction(title: "Sign Out", style: .Destructive) { (action) in self.performSegueWithIdentifier("signoutSegue", sender: self)
         }
         // add the logout action to the alert controller
         alertController.addAction(logoutAction)
-        
-        performSegueWithIdentifier("signoutSegue", sender: self)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
             // handle case of user canceling. Doing nothing will dismiss the view.
@@ -58,7 +56,7 @@ class SettingsViewController: UIViewController {
         // add the cancel action to the alert controller
         alertController.addAction(cancelAction)
         
-        presentViewController(alertController, animated: true) {
+        self.presentViewController(alertController, animated: true) {
             // optional code for what happens after the alert controller has finished presenting
         }
 
