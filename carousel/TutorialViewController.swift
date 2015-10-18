@@ -42,7 +42,9 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
             
         tutorialPageControl.hidden = true
             
-        carouselSpinView.alpha = 1
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.carouselSpinView.alpha = 1
+                }, completion: nil)
             
         }
         
