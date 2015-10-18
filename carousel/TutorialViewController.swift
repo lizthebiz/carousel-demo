@@ -26,18 +26,25 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     tutorialScrollView.contentSize = tutorialImageView.image!.size
         
     tutorialScrollView.delegate = self
-        
+     
+    carouselSpinView.alpha = 0
 
     }
     
     func scrollViewDidEndDecelerating(ScrollView: UIScrollView) {
         // Get the current page based on the scroll offset
-        var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
+        let page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
         
         // Set the current page, so the dots will update
         tutorialPageControl.currentPage = page
         
-        
+        if page == 3 {
+            
+        tutorialPageControl.hidden = true
+            
+        carouselSpinView.alpha = 1
+            
+        }
         
     }
 

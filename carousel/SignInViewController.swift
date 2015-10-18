@@ -18,6 +18,8 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var signinView: UIView!
 
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
@@ -71,6 +73,8 @@ class SignInViewController: UIViewController {
         
         if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             
+            print("empty text fields")
+            
             let emptyAlertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
             
             // create an OK action
@@ -88,10 +92,16 @@ class SignInViewController: UIViewController {
         }
         
         else if emailTextField.text != "liz@pizza.com" || passwordTextField.text != "sliceofcheese" {
+            
+            print("one or both text fields incorrect")
+            
+            self.loadingActivityIndicator.startAnimating()
                 
             delay(2){
                 
-            let incorrectAlertController = UIAlertController(title: "Whomp, whomp", message: "Incorrect email addresss and/or password. Please try again!", preferredStyle: .Alert)
+            self.loadingActivityIndicator.stopAnimating()
+            
+            let incorrectAlertController = UIAlertController(title: "Sign In Failed", message: "Incorrect email addresss and/or password.", preferredStyle: .Alert)
             
             // create an OK action
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
@@ -109,10 +119,16 @@ class SignInViewController: UIViewController {
         }
         
         else if emailTextField.text == "liz@pizza.com" && passwordTextField.text == "sliceofcheese" {
+            
+            print("both text fields correct")
+            
+            self.loadingActivityIndicator.startAnimating()
         
-            // Delay for 2 seconds, then run the code between the braces.
-             delay(2){
-                self.performSegueWithIdentifier("signinSegue", sender: nil)
+            delay(2){
+                
+            self.loadingActivityIndicator.stopAnimating()
+                
+            self.performSegueWithIdentifier("signinSegue", sender: nil)
             }
                 
         }

@@ -120,6 +120,10 @@
                                                     <action selector="onTap:" destination="vT5-UL-a8i" eventType="touchUpInside" id="hNn-bA-DeG"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="xE3-2w-43u">
+                                                <rect key="frame" x="272" y="27" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -131,6 +135,7 @@
                     <navigationItem key="navigationItem" id="sWz-9w-bEo"/>
                     <connections>
                         <outlet property="emailTextField" destination="Ea9-VR-64K" id="tdx-Lg-hfq"/>
+                        <outlet property="loadingActivityIndicator" destination="xE3-2w-43u" id="XUz-4g-bAz"/>
                         <outlet property="passwordTextField" destination="VJR-Ag-jPW" id="Gm6-gG-9Ht"/>
                         <outlet property="signinScrollView" destination="WNY-xi-iZ0" id="7ga-Uc-lar"/>
                         <outlet property="signinView" destination="gde-Pq-7yW" id="IPj-ca-Rwa"/>
@@ -167,7 +172,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="rK7-ct-Pid">
-                                                <rect key="frame" x="263" y="20" width="51" height="31"/>
+                                                <rect key="frame" x="252" y="20" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </switch>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Czt-TG-W0z">
