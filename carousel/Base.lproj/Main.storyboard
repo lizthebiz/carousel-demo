@@ -28,12 +28,16 @@
                                 <rect key="frame" x="123" y="906" width="76" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="JtR-sX-pdc">
+                                <rect key="frame" x="34" y="343" width="153" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="x6i-m3-Xle">
-                                <rect key="frame" x="200" y="751" width="76" height="75"/>
+                                <rect key="frame" x="200" y="359" width="76" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="SIu-9x-oK9">
-                                <rect key="frame" x="200" y="828" width="76" height="76"/>
+                                <rect key="frame" x="144" y="395" width="76" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="c8Q-Aq-eta">
@@ -41,12 +45,8 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="kwW-z3-Xqf">
-                                <rect key="frame" x="47" y="905" width="76" height="76"/>
+                                <rect key="frame" x="46.5" y="905" width="76" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="JtR-sX-pdc">
-                                <rect key="frame" x="34" y="343" width="153" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,6 +59,7 @@
                         <outlet property="introScrollView" destination="tPv-oz-2ET" id="GjV-0q-TJk"/>
                         <outlet property="tile1ImageView" destination="JtR-sX-pdc" id="v4V-uz-Pn8"/>
                         <outlet property="tile2ImageView" destination="x6i-m3-Xle" id="L7S-BT-xNK"/>
+                        <outlet property="tile3ImageView" destination="SIu-9x-oK9" id="VSO-6a-kSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

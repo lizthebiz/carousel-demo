@@ -18,6 +18,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var tile2ImageView: UIImageView!
     
+    @IBOutlet weak var tile3ImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +42,12 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         
         tile1ImageView.transform = CGAffineTransformMakeScale(0.25, 0.25)
         tile1ImageView.transform = CGAffineTransformRotate(view.transform, CGFloat(345 * M_PI / 180))
+        
+        tile2ImageView.transform = CGAffineTransformMakeScale(0.25, 0.25)
+        tile2ImageView.transform = CGAffineTransformRotate(view.transform, CGFloat(45 * M_PI / 180))
+        
+        tile3ImageView.transform = CGAffineTransformMakeScale(0.25, 0.25)
+        tile3ImageView.transform = CGAffineTransformRotate(view.transform, CGFloat(20 * M_PI / 180))
     
     }
     
@@ -47,7 +55,16 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         
         tile1ImageView.transform = CGAffineTransformMakeScale(1, 1)
         tile1ImageView.transform = CGAffineTransformRotate(view.transform, CGFloat(0 * M_PI / 180))
-        tile1ImageView.transform = CGAffineTransformMakeTranslation(12, 405)
+        tile1ImageView.transform = CGAffineTransformMakeTranslation(12, 408)
+        
+        tile2ImageView.transform = CGAffineTransformMakeScale(1, 1)
+        tile2ImageView.transform = CGAffineTransformRotate(view.transform, CGFloat(0 * M_PI / 180))
+        tile2ImageView.transform = CGAffineTransformMakeTranslation(0, 391)
+        
+        tile3ImageView.transform = CGAffineTransformMakeScale(1, 1)
+        tile3ImageView.transform = CGAffineTransformRotate(view.transform, CGFloat(0 * M_PI / 180))
+        tile3ImageView.transform = CGAffineTransformMakeTranslation(55, 433)
+        
     }
 
 }
