@@ -2,11 +2,12 @@
 
 This is a demo of the Carousel iOS app. Here's the [step-by-step tutorial](http://courses.codepath.com/courses/ios_for_designers/unit/2#!assignment) for creating this demo.
 
-Time spent: ~ 15 hours spent in total
+Time spent: ~ 17 hours, whew
 
 ## Completed user stories:
 
 * Static photo tiles on the initial screen.
+    * _Optional:_ Unsuccessful attempt to animate moving illustration tiles as user scrolls down the screen.
 * Sign In
     * Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
     * Upon tapping the Sign In button:
@@ -30,6 +31,6 @@ Time spent: ~ 15 hours spent in total
 
 ## Walkthrough of all user stories:
 
-![tada a gif]
+![tada Carousel demo gif](https://raw.githubusercontent.com/lizthebiz/carousel-demo/master/lizdalay-carousel.gif)
 
 *GIF created with [LiceCap](http://www.cockos.com/licecap/).*
